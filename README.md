@@ -16,7 +16,7 @@ def add(self, title, author, published):
             self.session.rollback()
             return False
 ```
-In the init.py  we access files from the folder through the `from <i>something</i> import *` command, and we will consider this import format to be the most convenient for users of our module.
+In the init.py  we access files from the folder through the `from *something* import *` command, and we will consider this import format to be the most convenient for users of our module.
 ```python
 from database.dbapi import *
 from database.models import *
