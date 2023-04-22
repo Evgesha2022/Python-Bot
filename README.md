@@ -1,7 +1,7 @@
 # Python-Bot
  In this project, a telegram bot was created for recording and issuing books.
 In the init.py the interface of our bot was made
-
+In the folder we keep a our database, exactly database models(models.py) and methods for obtaining and saving the results we need(dbpai.py). 
 In the dbpai.py the interface of our bot was made
 In the models.py the interface of our bot was made
 In the telegram.py the interface of our bot was made. It has functions to add a book, delete a book, a list of books, take a book, find a book, return a book, statistics about books.
