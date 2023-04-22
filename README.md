@@ -1,7 +1,7 @@
 # Python-Bot
  In this project, a telegram bot was created for recording and issuing books.</br>
-In the folder we keep a our database, exactly database models(models.py) and methods for obtaining and saving the results we need(dbpai.py).</br>
-For example, method for add book in our database ( dbpai.py ):
+In the folder 'database' we keep a our database, exactly database models('models.py') and methods for obtaining and saving the results we need('dbpai.py').</br>
+For example, method for add book in our database ( 'dbpai.py' ):
 ```python
 def add(self, title, author, published):
         # Создание новой книги и добавление ее в базу данных
