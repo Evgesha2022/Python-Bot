@@ -16,6 +16,11 @@ def add(self, title, author, published):
             self.session.rollback()
             return False
 ```
+In the init.py  we access files from the folder through the `from <i>something</i> import *` command, and we will consider this import format to be the most convenient for users of our module.
+```python
+from database.dbapi import *
+from database.models import *
+```
 In the telegram.py the interface of our bot was made. It has functions to add a book, delete a book, a list of books, take a book, find a book, return a book, statistics about books.
 ```python
  markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
