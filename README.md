@@ -1,6 +1,5 @@
 # Python-Bot
- In this project, a telegram bot was created for recording and issuing books.
-In the init.py the interface of our bot was made
+ In this project, a telegram bot was created for recording and issuing books.</br>
 In the folder we keep a our database, exactly database models(models.py) and methods for obtaining and saving the results we need(dbpai.py).</br>
 For example, method for add book in our database ( dbpai.py ):
 ```python
