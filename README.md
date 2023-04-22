@@ -2,8 +2,20 @@
  In this project, a telegram bot was created for recording and issuing books.
 In the init.py the interface of our bot was made
 In the folder we keep a our database, exactly database models(models.py) and methods for obtaining and saving the results we need(dbpai.py).</br>
-In the dbpai.py the interface of our bot was made
-In the models.py the interface of our bot was made
+For example, method for add book in our database ( dbpai.py ):
+```python
+def add(self, title, author, published):
+        # Создание новой книги и добавление ее в базу данных
+        book = Book(title=title, author=author, published=published, date_added=datetime.datetime.now(),
+                    date_deleted=datetime.datetime.max)
+        self.session.add(book)
+        try:
+            self.session.commit()
+            return book.book_id
+        except:
+            self.session.rollback()
+            return False
+```
 In the telegram.py the interface of our bot was made. It has functions to add a book, delete a book, a list of books, take a book, find a book, return a book, statistics about books.
 ```python
  markup = types.ReplyKeyboardMarkup(resize_keyboard=True)
