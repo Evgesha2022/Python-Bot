@@ -33,4 +33,16 @@ In the telegram.py the interface of our bot was made. It has functions to add a 
     markup.add(btn1, btn2, btn3, btn4, btn5, btn6, btn7)
     bot.send_message(message.from_user.id, "Добро пожаловать в чат бота-библиотеки! Выберите действие", reply_markup=markup)
 ```
-In the app.py we was creating a link where you cam
+In the app.py we creat a link that can be usedto get a statistics on the used of the book.
+```python
+def DownloadExcel(book_id):
+    book = Book(title="title", author="author", published="published", date_added=datetime.datetime.now(),
+                    date_deleted=datetime.datetime.max)
+    try:
+        int(book_id)
+    except:
+        pass
+    else:
+        DatabaseConnector.get_borrowsExcel(book_id)
+    return f'<a href=\"statisticsBook{book_id}.xlsx\" download>Скачать статистику по книге</a>'
+```
